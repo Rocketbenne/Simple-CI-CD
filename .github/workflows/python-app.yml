@@ -18,7 +18,12 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v4
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Verify directory contents
+      run: ls -la
+
     - name: Set up Python 3.10
       uses: actions/setup-python@v3
       with:
