@@ -48,6 +48,7 @@ jobs:
           exit 1
         fi
       id: check_changes
+      continue-on-error: true
 
     - name: Configure Git
       run: |
