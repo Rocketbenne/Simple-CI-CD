@@ -33,7 +33,7 @@ plt.ylabel('x[n]')
 
 plt.grid()
 plt.savefig('Test-Program')
-plt.show()
+#plt.show()
 
 # Write values to a .csv file
 filename = 'Test_Program.csv'
