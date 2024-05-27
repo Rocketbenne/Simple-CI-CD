@@ -50,7 +50,7 @@ jobs:
       env:
         CI_CD_SECRET: ${{ secrets.CI_CD_SECRET }}
       run: |
-        git add Test_Program.png Test_Program.csv
+        git add Test-Program.png Test_Program.csv
         git commit -m "Autmatic commit: Add genereated csv and jpg files"
         git push https://${CI_CD_SECRET}@github.com/${{ github.repository }} HEAD:${{ github.ref }}
 
