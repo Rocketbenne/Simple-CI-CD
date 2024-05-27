@@ -130,6 +130,7 @@ This step simply runs the program named 'test.py'.
       exit 1
     fi
   id: check_changes
+  continue-on-error: true
 ```
 The next section of the code checks if there were made any changes to the repository, if any files were written to or created. If so, it sets a variable which will later be used when setting up commits.
 
