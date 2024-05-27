@@ -41,12 +41,24 @@ jobs:
     - name: execute py script
       run: python test.py
 
+    - name: Check for changes
+      run: |
+        if git diff --quiet --exit-code; then
+          echo "No changes detected in the repository. Skipping commit."
+          exit 0
+        else
+          echo "Changes detected in the repository. Proceeding with commit."
+          exit 1
+        fi
+      id: check_changes
+
     - name: Configure Git
       run: |
         git config --global user.name 'github-actions[bot]'
         git config --global user.email 'github-actions[bot]@users.noreply.github.com'
 
     - name: Commit and push changes
+      if: steps.check_changes.outcome == 'failure'
       env:
         CI_CD_SECRET: ${{ secrets.CI_CD_SECRET }}
       run: |
