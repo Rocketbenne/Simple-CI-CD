@@ -52,7 +52,7 @@ to control and set up the workflow.
 standart yml-file, which controls the workflow of the Pipeline. 
 
 - To save the file and create the first instance of this workflow-program click on
-**Commit changes** in the top left corner.
+**Commit changes** in the top right corner.
 
 The following steps can be done in GitHub or locally and then pushed onto GitHub.
 
